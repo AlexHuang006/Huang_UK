@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice12</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        .recommend1 {
+            background-color: lightgreen;
+        }
+
+        .recommend2 {
+            background-color: lightblue;
+        }
+
+        .recommend3 {
+            background-color: lightcoral;
+        }
+
+        .footer {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- header area -->
+    <div class="header">
+        <div class="wrapper">
+            <!-- logo -->
+             <div class="logo">
+                <h1><a href="#">logo</a></h1>
+             </div>
+
+             <!-- navigation -->
+              <div class="nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">职业规划</a></li>
+                </ul>
+              </div>
+
+              <!-- search -->
+               <div class="search">
+                <input type="text" placeholder="请输入关键词">
+                <a href="#"></a>
+               </div>
+
+               <!-- user -->
+                <div class="user">
+                    <a href="#">
+                        <img src="./uploads/user.png" alt="">
+                        <span>Alex</span>
+                    </a>
+                </div>
+        </div>
+    </div>
+
+    <!-- banner area -->
+    <div class="banner">
+        <div class="wrapper">
+            <div class="left">
+                <ul>
+                    <li><a href="#">Front End Develop</a></li>
+                    <li><a href="#">Back End Develop</a></li>
+                    <li><a href="#">Mobile Develop</a></li>
+                    <li><a href="#">Artificial Intelligence</a></li>
+                    <li><a href="#">Business Predict</a></li>
+                    <li><a href="#">云计算&Big Data</a></li>
+                    <li><a href="#">运维&Test</a></li>
+                    <li><a href="#">UI Design</a></li>
+                    <li><a href="#">Product Manager</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <h3>My Course</h3>
+                <div class="content">
+                    <dl>
+                        <dt>Data Visual Course</dt>
+                        <dd><span>Studying</span>-<strong>How to use echarts</strong></dd>
+                    </dl>
+                    <dl>
+                        <dt>Vue Course</dt>
+                        <dd><span>Studying</span>-<strong>Know API</strong></dd>
+                    </dl>
+                    <dl>
+                        <dt>React Course</dt>
+                        <dd><span>Studying</span>-<strong>Rudex and TS</strong></dd>
+                    </dl>
+                    <a href="#">More Course</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- recommend area1 -->
+    <div class="recommend1">3</div>
+
+    <!-- recommend area2 -->
+    <div class="recommend2">4</div>
+
+    <!-- recommend area3 -->
+    <div class="recommend3">5</div>
+
+    <!-- footer area -->
+     <div class="footer">6</div>
+     <script>
+        // const nav = document.querySelector('.nav li')
+        // const navBtn = document.querySelectorAll('.nav li a')
+        // nav.addEventListener('click', function () {
+        //     navBtn.classList.remove('active')
+        //     navBtn.classList.add('active')
+        // })
+        const navItems = document.querySelectorAll('.nav li a');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', function () {
+                // 移除所有项的 active 类
+                navItems.forEach(nav => nav.classList.remove('active'));
+                // 给当前点击项添加 active 类
+                this.classList.add('active');
+            });
+        });
+     </script>
+</body>
+</html>
