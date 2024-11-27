@@ -6,15 +6,6 @@
     <title>Practice12</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
-    <style>
-        .recommend3 {
-            background-color: lightcoral;
-        }
-
-        .footer {
-            background-color: lightyellow;
-        }
-    </style>
 </head>
 <body>
     <!-- 1. header area -->
@@ -137,11 +128,91 @@
          </div>
     </div>
 
-    <!-- recommend area3 -->
-    <div class="recommend3">5</div>
+    <!-- 5. recommend area3 -->
+    <div class="recommend3 wrapper">
+        <!-- 5.1 header -->
+        <div class="hd">
+            <h3>Front End Developer</h3>
+            <ul>
+                <li><a href="#" class="active">热门</a></li>
+                <li><a href="#">Junior</a></li>
+                <li><a href="#">Middle</a></li>
+                <li><a href="#">Senior</a></li>
+            </ul>
+            <a href="#" class="more">More</a>
+        </div>
 
-    <!-- footer area -->
-     <div class="footer">6</div>
+        <!-- 5.2 body -->
+         <div class="bd">
+            <div class="left">
+                <img src="./uploads/web_left.png" alt="">
+            </div>
+            <div class="right">
+                <div class="top">
+                    <img src="./uploads/web_top.png" alt="">
+                </div>
+                <div class="bottom">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="pic"><img src="./uploads/course02.png" alt=""></div>
+                                <div class="text">
+                                    <h4>Vue.js Project</h4>
+                                    <p><span>Advance</span> ~ <i>2.7</i>k Studying</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="pic"><img src="./uploads/course01.png" alt=""></div>
+                                <div class="text">
+                                    <h4>JavaScript Project</h4>
+                                    <p><span>Advance</span> ~ <i>1.1</i>k Studying</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <!-- 6. footer area -->
+     <div class="footer">
+        <!-- 6.1 left area -->
+        <div class="left">
+            <a href="#"><img src="./images/logo.png" alt=""></a>
+            <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。© 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
+            <a href="#" class="download">DownLoad APP</a>
+        </div>
+
+        <!-- 6.2 right area -->
+        <div class="right">
+            <dl>
+                <dt>About Website</dt>
+                <dd><a href="#">About</a></dd>
+                <dd><a href="#">Team Group</a></dd>
+                <dd><a href="#">Job Opportunity</a></dd>
+                <dd><a href="#">Online Service</a></dd>
+                <dd><a href="#">Help</a></dd>
+            </dl>
+            <dl>
+                <dt>Gold Guide</dt>
+                <dd><a href="#">How to Register</a></dd>
+                <dd><a href="#">How to choose course</a></dd>
+                <dd><a href="#">How to get something</a></dd>
+                <dd><a href="#">What is the Credit</a></dd>
+                <dd><a href="#">if failed</a></dd>
+            </dl>
+            <dl>
+                <dt>Corporation</dt>
+                <dd><a href="#">Institute</a></dd>
+                <dd><a href="#">Supervisor</a></dd>
+            </dl>
+        </div>
+     </div>
+
+    <!-- 7. JavaScript -->
      <script>
     //    1. Header area for navigation
         const navItems = document.querySelectorAll('.nav li a');
@@ -154,6 +225,17 @@
                 this.classList.add('active');
             });
         });
+
+        // 5. Recommend area3 for header
+        const navItems3 = document.querySelectorAll('.recommend3 .hd li a')
+
+        navItems3.forEach(item => {
+            item.addEventListener('click', function () {
+                navItems3.forEach(nav => nav.classList.remove('active'));
+
+                this.classList.add('active')
+            })
+        })
      </script>
 </body>
 </html>
