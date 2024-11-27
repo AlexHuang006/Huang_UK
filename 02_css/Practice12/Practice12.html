@@ -7,14 +7,6 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
     <style>
-        .recommend1 {
-            background-color: lightgreen;
-        }
-
-        .recommend2 {
-            background-color: lightblue;
-        }
-
         .recommend3 {
             background-color: lightcoral;
         }
@@ -109,11 +101,41 @@
             <li><a href="#">TypeScript</a></li>
             <li><a href="#">React</a></li>
         </ul>
-        <a href="#">Edit Interesting</a>
+        <a href="#" class="modify">Edit Interesting</a>
     </div>
 
-    <!-- recommend area2 -->
-    <div class="recommend2">4</div>
+    <!-- 4. recommend area2 -->
+    <div class="recommend2 wrapper">
+        <!-- 4.1 header -->
+        <div class="hd">
+            <h3>Boutique Recommendation</h3>
+            <a href="#" class="more">More</a>
+        </div>
+
+        <!-- 4.2 body -->
+         <div class="bd">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="pic"><img src="./uploads/course02.png" alt=""></div>
+                        <div class="text">
+                            <h4>Vue.js Project</h4>
+                            <p><span>Advance</span> ~ <i>2.7</i>k Studying</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="pic"><img src="./uploads/course01.png" alt=""></div>
+                        <div class="text">
+                            <h4>JavaScript Project</h4>
+                            <p><span>Advance</span> ~ <i>1.1</i>k Studying</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+         </div>
+    </div>
 
     <!-- recommend area3 -->
     <div class="recommend3">5</div>
@@ -121,12 +143,7 @@
     <!-- footer area -->
      <div class="footer">6</div>
      <script>
-        // const nav = document.querySelector('.nav li')
-        // const navBtn = document.querySelectorAll('.nav li a')
-        // nav.addEventListener('click', function () {
-        //     navBtn.classList.remove('active')
-        //     navBtn.classList.add('active')
-        // })
+    //    1. Header area for navigation
         const navItems = document.querySelectorAll('.nav li a');
 
         navItems.forEach(item => {
