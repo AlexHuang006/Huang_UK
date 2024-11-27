@@ -1,0 +1,154 @@
+.banner {
+    background-color: skyblue;
+}
+
+.recommend1,
+.recommend2,
+.recommend3,
+.recommend4,
+.recommend5 {
+    background-color: #5eb69c;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1240px;
+}
+
+/* 1. shortcut navigation */
+.shortcut {
+    height: 52px;
+    background-color: #333;
+}
+
+.shortcut .wrapper {
+    display: flex;
+    justify-content: flex-end;
+    height: 52px;
+}
+
+.shortcut ul {
+    display: flex;
+    line-height: 52px;
+}
+
+.shortcut li a {
+    padding: 0 15px;
+    border-right: 1px solid #999;
+    color: #fff;
+}
+
+.shortcut li:last-child a {
+    border-right: 0;
+}
+
+.shortcut li .iconfont {
+    margin-right: 4px;
+    /* vertical-align: middle; */
+}
+
+.shortcut li .login {
+    color: #5eb69c;
+}
+
+/* 2. header  */
+.header {
+    display: flex;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    height: 88px;
+}
+
+/* 2.1 logo  */
+.logo {
+    margin-right: 40px;
+    width: 200px;
+    height: 88px;
+}
+
+.logo a {
+    display: block;
+    width: 200px;
+    height: 88px;
+    background-image: url(../images/logo.png);
+    font-size: 0;
+}
+
+/* 2.2 navigation */
+.nav {
+    margin-top: 33px;
+    margin-right: 28px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav li {
+    margin-right: 40px;
+}
+
+.nav li a:hover {
+    border-bottom: 2px solid #5eb69c;
+    color: #5eb69c;
+}
+
+/* 2.3 search  */
+.search {
+    display: flex;
+    margin-top: 33px;
+    margin-right: 45px;
+    width: 170px;
+    height: 34px;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.search .iconfont {
+    margin-right: 8px;
+    line-height: 32px;
+    font-size: 18px;
+    color: #ccc;
+}
+
+.search input {
+    flex: 1;
+    width: 0;
+}
+
+.search input::placeholder {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* 2.4 cart  */
+.cart {
+    position: relative;
+    margin-top: 32px;
+}
+
+.cart .iconfont {
+    font-size: 24px;
+}
+
+.cart i {
+    position: absolute;
+    top: 1px;
+    left: 15px;
+    padding: 0 6px;
+    height: 15px;
+    background-color: #e26237;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #fffefe;
+    line-height: 15px;
+}
+
+/* 6. help  */
+.help1 {
+    background-color: orange;
+}
+
+/* 7. footer  */
+.footer {
+    background-color: aquamarine;
+}
