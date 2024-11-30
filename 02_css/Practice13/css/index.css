@@ -289,6 +289,10 @@
 }
 
 .recommend4 .content .right ul {
+    display: none;
+}
+
+.recommend4 .content .right .active{
     display: flex;
     flex-wrap: wrap;
 }

@@ -126,43 +126,85 @@ for (i = 0; i < contentData3.length; i++) {
 container3.innerHTML = liArray3.join('')
 
 // 7. Products area 4
-const container4 = document.querySelector('.recommend4 .content .right ul')
+// 7.1 get content 
+// const container4 = document.querySelector('.recommend4 .content .right .a1')
 const contentData4 = [
-    {url: './uploads/fresh1.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '21'},
-    {url: './uploads/fresh2.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '21'},
-    {url: './uploads/fresh3.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '21'},
-    {url: './uploads/fresh4.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '21'},
-    {url: './uploads/fresh5.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '21'},
-    {url: './uploads/fresh6.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '21'},
-    {url: './uploads/fresh7.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '21'},
-    {url: './uploads/fresh8.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '21'},
+    [
+        {url: './uploads/fresh1.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '121'},
+        {url: './uploads/fresh2.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '221'},
+        {url: './uploads/fresh3.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '321'},
+        {url: './uploads/fresh4.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '9.21'},
+        {url: './uploads/fresh5.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '3.21'},
+        {url: './uploads/fresh6.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '21'},
+        {url: './uploads/fresh7.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '21'},
+        {url: './uploads/fresh8.png', h: 'Highly recommend snacks', p1: 'Flavour', p2: 'Snacks name', price: '21'}
+        ],
+    [
+            {url: './uploads/fresh8.png', h: 'Highly recommend snacks2', p1: 'Good', p2: 'Snacks name', price: '31'},
+            {url: './uploads/fresh2.png', h: 'Highly recommend snacks2', p1: 'Good', p2: 'Snacks name', price: '31'},
+            {url: './uploads/fresh7.png', h: 'Highly recommend snacks2', p1: 'Good', p2: 'Snacks name', price: '2.31'},
+            {url: './uploads/fresh4.png', h: 'Highly recommend snacks2', p1: 'Good', p2: 'Snacks name', price: '31'},
+            {url: './uploads/fresh5.png', h: 'Highly recommend snacks2', p1: 'Good', p2: 'Snacks name', price: '3.31'},
+            {url: './uploads/fresh1.png', h: 'Highly recommend snacks2', p1: 'Good', p2: 'Snacks name', price: '31'},
+            {url: './uploads/fresh7.png', h: 'Highly recommend snacks2', p1: 'Good', p2: 'Snacks name', price: '6.31'},
+            {url: './uploads/fresh2.png', h: 'Highly recommend snacks2', p1: 'Good', p2: 'Snacks name', price: '31'},
+        ],
+    [
+            {url: './uploads/fresh7.png', h: 'Highly recommend snacks3', p1: 'Great', p2: 'Snacks name3', price: '4.34'},
+            {url: './uploads/fresh8.png', h: 'Highly recommend snacks3', p1: 'Great', p2: 'Snacks name3', price: '34'},
+            {url: './uploads/fresh2.png', h: 'Highly recommend snacks3', p1: 'Great', p2: 'Snacks name3', price: '34'},
+            {url: './uploads/fresh4.png', h: 'Highly recommend snacks3', p1: 'Great', p2: 'Snacks name3', price: '34'},
+            {url: './uploads/fresh5.png', h: 'Highly recommend snacks3', p1: 'Great', p2: 'Snacks name3', price: '5.34'},
+            {url: './uploads/fresh6.png', h: 'Highly recommend snacks3', p1: 'Great', p2: 'Snacks name3', price: '1.34'},
+            {url: './uploads/fresh3.png', h: 'Highly recommend snacks3', p1: 'Great', p2: 'Snacks name3', price: '34'},
+            {url: './uploads/fresh1.png', h: 'Highly recommend snacks3', p1: 'Great', p2: 'Snacks name3', price: '2.34'},
+        ]
 ]
 
-const liArray4 = []
+
 for (i = 0; i < contentData4.length; i++) {
-    liArray4.push(`
-        <li>
-            <a href="#">
-                <div class="pic"><img src="${contentData4[i].url}" alt=""></div>
-                <div class="txt">
-                    <div class="info">
-                        <h4>${contentData4[i].h}</h4>
-                        <p>${contentData4[i].p1}</p>
-                        <p>${contentData4[i].p2}</p>
+    const liArray4 = []
+    for (j = 0; j < contentData4[i].length; j++) {
+        liArray4.push(`
+                <li>
+                    <a href="#">
+                        <div class="pic"><img src="${contentData4[i][j].url}" alt=""></div>
+                        <div class="txt">
+                            <div class="info">
+                                <h4>${contentData4[i][j].h}</h4>
+                                <p>${contentData4[i][j].p1}</p>
+                                <p>${contentData4[i][j].p2}</p>
+                            </div>
+                            <p class="price">£<span>${contentData4[i][j].price}</span></p>
+                        </div>
+                    </a>
+                    <div class="cover">
+                        <p>Finding more</p>
+                        <p></p>
+                        <p>more<span class="iconfont icon-arrow-right-bold"></span></p>
                     </div>
-                    <p class="price">£<span>${contentData4[i].price}</span></p>
-                </div>
-            </a>
-            <div class="cover">
-                <p>Finding more</p>
-                <p></p>
-                <p>more<span class="iconfont icon-arrow-right-bold"></span></p>
-            </div>
-        </li>
-        `)
+                </li>
+            `)
+    }
+    document.querySelector(`.recommend4 .content .right ul:nth-child(${i+1})`).innerHTML = liArray4.join('')
+    console.log(`${i}`)
+    console.log(liArray4)
 }
 
-container4.innerHTML = liArray4.join('')
+
+
+// 7.2 
+const navigation2 = document.querySelectorAll('.recommend4 .tittle .right ul li')
+
+navigation2.forEach((item, index) => {
+    item.addEventListener('mouseenter', function() {
+        document.querySelector('.recommend4 .tittle .right ul .active').classList.remove('active')
+        document.querySelector(`.recommend4 .tittle .right ul li:nth-child(${index + 1}) a`).classList.add('active')
+        document.querySelector('.recommend4 .content .right .active').classList.remove('active')
+        // console.log(`delete a${index}`)
+        document.querySelector(`.recommend4 .content .right ul:nth-child(${index+1})`).classList.add('active')
+    })
+})
 
 // 8. Article 
 const container5 = document.querySelector('.recommend5 .topic_bd ul')
