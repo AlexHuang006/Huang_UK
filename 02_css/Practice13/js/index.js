@@ -187,8 +187,8 @@ for (i = 0; i < contentData4.length; i++) {
             `)
     }
     document.querySelector(`.recommend4 .content .right ul:nth-child(${i+1})`).innerHTML = liArray4.join('')
-    console.log(`${i}`)
-    console.log(liArray4)
+    // console.log(`${i}`)
+    // console.log(liArray4)
 }
 
 
@@ -255,3 +255,75 @@ for (i = 0; i < contentData5.length; i++) {
 }
 
 container5.innerHTML = liArray5.join('')
+
+// 10. elevator
+function appear1 () {
+    const elevator = document.querySelector('.elevator')
+
+    window.addEventListener('scroll', function() {
+        const n = document.documentElement.scrollTop
+        // if (n > 300) {
+        //     elevator.style.opacity = 1
+        // } else {
+        //     elevator.style.opactiy = 0
+        // }
+
+        elevator.style.opacity = n > 300 ? 1 : 0
+    })
+
+    const backTop = document.querySelector('#backTop')
+
+    backTop.addEventListener('click', function () {
+        document.documentElement.scrollTop =0
+    })
+}
+
+function appear2 () {
+    const list = document.querySelector('.elevator-list')
+    list.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A' && e.target.dataset.name) {
+            const old = document.querySelector('.elevator .active')
+
+            if (old) {
+                old.classList.remove('active')
+            }
+            
+            e.target.classList.add('active')
+
+            const top = document.querySelector(`.recommen${e.target.dataset.name}`).offsetTop
+            // console.log(top)
+
+            document.documentElement.scrollTop = top
+        }
+    })
+}
+
+function appear3 () {
+    window.addEventListener('scroll', function () {
+        const old = document.querySelector('.elevator .active')
+    
+            if (old) {
+                old.classList.remove('active')
+            }
+    
+        const recommend1 = document.querySelector('.recommend1')
+        const recommend2 = document.querySelector('.recommend2')
+        const recommend3 = document.querySelector('.recommend3')
+        const recommend4 = document.querySelector('.recommend4')
+        const recommend5 = document.querySelector('.recommend5')
+        const n = document.documentElement.scrollTop
+        if (n >= recommend1.offsetTop && n < recommend2.offsetTop) {
+            document.querySelector('[data-name=d1]').classList.add('active')
+        } else if (n >= recommend2.offsetTop && n < recommend3.offsetTop) {
+            document.querySelector('[data-name=d2]').classList.add('active')
+        } else if (n >= recommend3.offsetTop && n < recommend4.offsetTop) {
+            document.querySelector('[data-name=d3]').classList.add('active')
+        } else if (n >= recommend4.offsetTop && n < recommend5.offsetTop) {
+            document.querySelector('[data-name=d4]').classList.add('active')
+        }
+    })
+}
+
+appear1()
+appear2()
+appear3()
