@@ -156,9 +156,15 @@ html {
 }
 
 .bd li {
+    position: relative;
     width: 304px;
     height: 404px;
-    background-color: #eef9f4;
+    background-color: #eef9f4;;
+}
+
+.bd li:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    top: -3px;
 }
 
 .bd li .pic {

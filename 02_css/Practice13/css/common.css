@@ -20,6 +20,10 @@
     line-height: 52px;
 }
 
+.shortcut li a:hover {
+    color: #5eb69c;
+}
+
 .shortcut li a {
     padding: 0 15px;
     border-right: 1px solid #999;
@@ -35,9 +39,9 @@
     /* vertical-align: middle; */
 }
 
-.shortcut li .login {
+/* .shortcut li .login {
     color: #5eb69c;
-}
+} */
 
 /* 2. header  */
 .header {
