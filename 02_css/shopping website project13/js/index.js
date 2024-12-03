@@ -23,7 +23,7 @@ let timeId = setInterval(function() {
         i = 0
     }
     toggleBanner(i)
-}, 1500)
+}, 1000)
 
 // 3.2 Mouse enter or leave to stop or continue banner play 
 banner.addEventListener('mouseenter', function () {
@@ -38,7 +38,7 @@ banner.addEventListener('mouseleave', function () {
             i = 0
         }
         toggleBanner(i)
-    }, 1500)
+    }, 1000)
 })
 
 // 3.3 click event for indicator 
@@ -327,3 +327,25 @@ function appear3 () {
 appear1()
 appear2()
 appear3()
+
+// 11. login
+const li1 = document.querySelector('.shortcut li:first-child')
+const li2 = li1.nextElementSibling
+
+function render () {
+    const uname = localStorage.getItem('uname')
+
+    if (uname) {
+        li1.innerHTML = `<a href="#"><i class="iconfont icon-favorites-fill"></i>${uname}</a>`
+        li2.innerHTML = `<a href="#">Log out</a>`
+    } else {
+        li1.innerHTML = `<a href="./login.html">Login</a>`
+        li2.innerHTML = `<a href="./register.html">Register</a>`
+    }
+}
+render()
+
+li2.addEventListener('click', function () {
+    localStorage.removeItem('uname')
+    render()
+})

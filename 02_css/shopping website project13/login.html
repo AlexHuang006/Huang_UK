@@ -3,9 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>小兔鲜儿-Fresh、Cheaper、Fast！</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
-<body>
+<body> 
+    <!-- Header Part -->
+     <div class="header wrapper">
+        <div class="logo">
+            <h1><a href="./index.html"></a></h1>
+        </div>
+     </div>
+
+     <!-- Body Part -->
+      <div class="loginBody">
+        <div class="wrapper">
+            <form action="" autocomplete="off">
+                <div class="box">
+                    <div class="tab-nav">
+                        <a href="#" class="active" data-id="0">Login</a>
+                        <!-- <a href="#" class="div"></a> -->
+                        <a href="#" data-id="1">QR Code Login</a>
+                    </div>
+
+                    <div class="tab-pane">
+                        <!-- <div class="link">
+                            <a href="">手机验证码登录</a>
+                        </div> -->
+
+                        <div class="input">
+                            <span class="iconfont"></span>
+                            <input required type="text" placeholder="请输入手机号" name="username">
+                        </div>
     
+                        <div class="input">
+                            <span class="iconfont"></span>
+                            <input required type="password" placeholder="请输入密码" name="password">
+                        </div>
+    
+                        <div class="agree">
+                            <label for="my-checkbox">
+                                <input type="checkbox" value="1" id="my-checkbox" class="remember" name = "agree">
+                            </label>
+                            我已同意 <a href="">《服务条款》</a> 和 <a href="">《隐私协议》</a>
+                        </div>
+
+                        <div class="button clearfix">
+                            <button type="submit" class="dl">登录</button>
+                            <div class="down">
+                                <a class="fl" href="">忘记密码？</a>
+                                <a class="fr" href="./register.html">免费注册</a>
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" style="display: none;">
+                        <img class="code" src="./images/code.png" alt="">
+                    </div>
+                </div>
+            </form>
+        </div>
+      </div>
+    
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="wrapper">
+            <div class="service">
+                <ul>
+                    <li>
+                        <h5></h5>
+                        <p>Cheaper</p>
+                    </li>
+                    <li>
+                        <h5></h5>
+                        <p>Delivery</p>
+                    </li>
+                    <li>
+                        <h5></h5>
+                        <p>Fresh</p>
+                    </li>
+                    <li>
+                        <h5></h5>
+                        <p>Good Service</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="help">
+                <div class="left">
+                    <dl>
+                        <dt>Shopping Guide</dt>
+                        <dd><a href="#">Return and refund policy</a></dd>
+                        <dd><a href="#">Payment method</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>Customer Service</dt>
+                        <dd><a href="#">Shipping info</a></dd>
+                        <dd><a href="#">Report activity</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>Company info</dt>
+                        <dd><a href="#">About us</a></dd>
+                        <dd><a href="#">Careers</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>Help</dt>
+                        <dd><a href="#">Support center</a></dd>
+                        <dd><a href="#">Safety center</a></dd>
+                    </dl>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>
+                            <div class="pic"><img src="./images/wechat.png" alt=""></div>
+                            <p>Wechat</p>
+                        </li>
+                        <li>
+                            <div class="pic"><img src="./images/app.png" alt=""></div>
+                            <p>Download APP</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>
+                    <a href="#">About Us</a>|
+                    <a href="#">Help Center</a>|
+                    <a href="#">Customer Center</a>|
+                    <a href="#">Delivery Center</a>|
+                    <a href="#">Business</a>|
+                    <a href="#">Corporate Responsibility</a>|
+                    <a href="#">Contact Us</a>
+                </p>
+                <p>CopyRight © Alex Shopping Web</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/login.js"></script>
 </body>
 </html>

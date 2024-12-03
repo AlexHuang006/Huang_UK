@@ -20,6 +20,11 @@
     line-height: 52px;
 }
 
+.shortcut li:nth-child(1) a,
+.shortcut li:nth-child(2) a{
+    color: #5eb69c;
+}
+
 .shortcut li a:hover {
     color: #5eb69c;
 }

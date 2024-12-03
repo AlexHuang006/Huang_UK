@@ -1,0 +1,121 @@
+.loginBody {
+    height: 488px;
+    background: url(../images/login-bg.png) no-repeat center/cover;
+}
+
+.loginBody .wrapper {
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.loginBody .box {
+    position: absolute;
+    width: 380px;
+    height: 350px;
+    top: 60px;
+    right: 100px;
+    background: #fff;
+    padding: 20px 40px;
+    box-shadow: 0px 0px 25px 0px rgba(3, 3, 3, 0.14);
+}
+
+.loginBody .box .tab-nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+
+.loginBody .tab-nav a {
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    /* background-color: pink; */
+}
+
+.loginBody .tab-nav .div {
+    width: 1px;
+    height: 20px;
+    background-color: #ededed;
+}
+
+.loginBody .tab-nav .active {
+    border-bottom: 2px solid #17bb9b;
+}
+
+.loginBody .tab-pane .code {
+    display: block;
+    margin: 22px auto;
+    width: 200px;
+    height: 200px;
+}
+
+.loginBody .tab-pane .link {
+    text-align: right;
+    margin: 15px auto;
+    /* background-color: pink; */
+}
+
+.loginBody .tab-pane .link a {
+    color: #17bb9b;
+}
+
+.loginBody .tab-pane .input {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    margin-top: 17px;
+    background: #cfcdcd;
+    border: 1px solid #17bb9b;
+}
+
+.loginBody .tab-pane .input .iconfont {
+    width: 36px;
+    height: 36px;
+}
+
+.loginBody .tab-pane .input input {
+    flex: 1;
+    padding-left: 15px;
+}
+
+.loginBody .agree {
+    padding: 17px 0;
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+.loginBody .agree a {
+    color: #0673b1;
+    font-size: 14px;
+}
+
+.loginBody .button {
+    margin-bottom: 15px;
+}
+
+.loginBody .button .dl {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #17bb9b;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 17px;
+    border: 0;
+    color: #fff;
+}
+
+.loginBody .button .fr {
+    color: #17bb9b;
+}
+
+.loginBody .button .down {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: pink; */
+}
+
