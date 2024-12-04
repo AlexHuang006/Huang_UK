@@ -12,19 +12,19 @@
 
             let i = 10
 
-            code.innerHTML = `${i}秒后重新获取`
+            code.innerHTML = `${i}s, code sent`
 
             code.classList.remove('active')
 
             let timerId = setInterval(function() {
                 i--
 
-                code.innerHTML = `0${i}秒后重新获取`
+                code.innerHTML = `0${i}s, code sent`
 
                 if (i === 0) {
                     clearInterval(timerId)
 
-                    code.innerHTML = `重新获取`
+                    code.innerHTML = `Resend Code`
 
                     flag = true
 
@@ -44,7 +44,7 @@ function verifyName () {
     const reg = /^[a-zA-Z0-9-_]{6,10}$/
 
     if (!reg.test(username.value)) {
-        msg.innerHTML = '输入不合法，请输入6～10位'
+        msg.innerHTML = 'Enter at least 6 characters'
         return false
     }
 
@@ -63,7 +63,7 @@ function verifyPhone () {
     const reg = /^07\d{9}$/
 
     if (!reg.test(phone.value)) {
-        msg.innerHTML = '输入不合法，请输入正确的手机号码'
+        msg.innerHTML = 'Enter your mobile phone number'
 
         return false
     }
@@ -83,7 +83,7 @@ function verifyCode () {
     const reg = /^\d{6}$/
 
     if (!reg.test(phoneCode.value)) {
-        msg.innerHTML = '输入不合法,6 位数字'
+        msg.innerHTML = 'Enter at least 6 numeric characters'
         return false
     }
 
@@ -102,7 +102,7 @@ function verifyPassword () {
     const reg = /^[a-zA-Z0-9-_]{6,20}$/
 
     if (!reg.test(password.value)) {
-        msg.innerHTML = '输入不合法,6~20位数字字母符号组成'
+        msg.innerHTML = 'Enter at least 6 characters'
         return false
     }
     msg.innerHTML = ''
@@ -118,7 +118,7 @@ function confirmPassword () {
     const msg = confirm.nextElementSibling
 
     if (confirm.value !== password.value) {
-        msg.innerHTML = '两次密码输入不一致'
+        msg.innerHTML = 'Passwords do not match'
         return false
     }
     msg.innerHTML = ''
@@ -134,17 +134,17 @@ const agree = document.querySelector('[name = agree]')
 form.addEventListener('submit', function (e) {
     e.preventDefault()
     if (!agree.checked) {
-        return alert('请勾选同意协议')
-        e.preventDefault()
+        alert('Please check the box to accept the Privacy Policy.')
+        return
     }
-    if (!verifyName()) e.preventDefault()
-    if (!verifyPhone()) e.preventDefault()
-    if (!verifyCode()) e.preventDefault()
-    if (!verifyPassword()) e.preventDefault()
-    if (!confirmPassword()) e.preventDefault()
+    if (!verifyName()) return
+    if (!verifyPhone()) return
+    if (!verifyCode()) return
+    if (!verifyPassword()) return
+    if (!confirmPassword()) return
     
     localStorage.setItem('uname', username.value)
     
-    alert('注册成功')
+    alert('Registration Successful')
     location.href = './index.html'
 })

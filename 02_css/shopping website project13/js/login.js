@@ -28,7 +28,7 @@
       e.preventDefault()
     //   // 判断是否勾选同意协议
       if (!agree.checked) {
-        return alert('请勾选同意协议')
+        return alert('Please check the box to accept the Privacy Policy.')
       }
 
     //   // 记录用户名到本地存储
